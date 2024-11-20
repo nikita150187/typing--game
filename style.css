@@ -30,7 +30,7 @@ select {
   -webkit-appearance: none;
   -moz-appearance: none;
   border-radius: 4px;
-  font-weight: 500;
+  font-weight: 700;
 }
 
 select:focus,

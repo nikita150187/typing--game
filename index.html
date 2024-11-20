@@ -7,23 +7,40 @@
   <link rel="stylesheet" href="/style.css">
 </head>
 <body>
-  <div class="container">
-    <h1>Typing Game</h1>
-    <p>Type the word below before time runs out!</p>
-    <div id="game-container">
-      <div id="word-display">Word appears here</div>
-      <input type="text" id="text-input" placeholder="Start typing..." />
-      <div class="info">
-        <p>Score: <span id="score">0</span></p>
-        <p>Time: <span id="time">10</span>s</p>
-      </div>
+    <button id="settings-btn" class="settings-btn">
+        <i class="fas fa-cog"></i>
+      </button>
+  
+      <div id="settings" class="settings">
+        <form id="settings-form">
+          <div>
+            <label for="difficutly" class="difficulty">Difficulty:</label>
+            <select id="difficulty">
+              <option value="easy">Easy</option>
+              <option value="medium">Medium</option>
+              <option value="hard">Hard</option>
+            </select>
+          </div>
+        </form>
+      </div>  
+      <div class="container">
+        <h1>Typing Game</h1>
+        <p>Type the word below before time runs out!</p>
+        <div id="game-container">
+            <div id="word-display">Word appears here</div>
+            <input type="text" id="text-input" placeholder="Start typing..." />
+            <div class="info">
+                <p class="time-container">Time left: <span id="time">10s</span></p>
+
+                <p class="score-container">Score: <span id="score">0</span></p>
+            </div>
+        </div>
+        <div id="game-over" class="hidden">
+            <h2>Game Over!</h2>
+            <p>Your final score: <span id="final-score"></span></p>
+            <button id="restart-btn">Restart Game</button>
+        </div>
     </div>
-    <div id="game-over" class="hidden">
-      <h2>Game Over!</h2>
-      <p>Your final score: <span id="final-score"></span></p>
-      <button id="restart-btn">Restart Game</button>
-    </div>
-  </div>
   <script src="/script.js"></script>
 </body>
 </html>
